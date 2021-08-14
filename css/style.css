@@ -1,0 +1,136 @@
+:root {
+  --font-type: "Poppins";
+  --font-color: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: var(--font-type);
+  background-image: linear-gradient(to right, #e65763, #34073d);
+  color: var(--font-color);
+  text-align: center;
+  padding-top: 30px;
+}
+
+#tasks-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* tasks form */
+#tasks-header {
+  margin-top: 40px;
+}
+
+#add-task-form {
+  position: relative;
+}
+
+#add-task-form input {
+  box-sizing: border-box;
+  border: 1px solid #34073d;
+  background: var(--font-color);
+  color: #34073d;
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  font-family: var(--font-type);
+}
+
+#add-task-form input::placeholder {
+  color: #34073d;
+}
+
+#add-task-form input:focus {
+  outline: none;
+  resize: none;
+}
+
+#add-btn {
+  position: absolute;
+  background: var(--font-color);
+  border: 1px solid #34073d;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 60px;
+  height: 59px;
+  top: 0;
+  right: 0;
+  padding-top: 3px;
+}
+
+#add-btn:hover {
+  background-color: #34073d;
+  color: var(--font-color);
+}
+
+ion-icon {
+  font-size: 25px;
+}
+
+/* tasks container */
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  text-align: left;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  border-bottom: 3px solid #34073d;
+  background-color: var(--font-color);
+  color: #34073d;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#task-list li span {
+  font-size: 18px;
+}
+
+#task-list ion-icon {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  transform: 0.5s;
+  cursor: pointer;
+  width: 30px;
+  padding: 5px;
+}
+
+.done-btn {
+  right: 40px;
+}
+
+.done-btn:hover {
+  transition: 0.5s;
+  color: var(--font-color);
+  background-color: #09e01b;
+}
+
+.remove-btn {
+  right: 0;
+}
+
+.remove-btn:hover {
+  transition: 0.5s;
+  color: var(--font-color);
+  background-color: #eb0927;
+}
+
+.hide {
+  display: none;
+}
+
+#task-list li.done {
+  background-color: #34073d;
+  color: var(--font-color);
+  text-decoration: line-through;
+}
